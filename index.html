@@ -172,7 +172,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="起飞"><a href="#起飞" class="headerlink" title="起飞"></a>起飞</h2>
+        <h1 id="欢迎来到渣渣辉的博客"><a href="#欢迎来到渣渣辉的博客" class="headerlink" title="欢迎来到渣渣辉的博客"></a>欢迎来到渣渣辉的博客</h1><p><img src="https://img.ivsky.com/img/tupian/co/202003/22/erji-011.jpg" alt="头戴式耳机图片(33张)"></p>
+<h2 id="hexo搭建博客"><a href="#hexo搭建博客" class="headerlink" title="hexo搭建博客"></a>hexo搭建博客</h2><h4 id="前提先安装node和git-非常重要"><a href="#前提先安装node和git-非常重要" class="headerlink" title="前提先安装node和git(非常重要)"></a>前提先安装node和git(非常重要)</h4><p>hexo init 初始化博客</p>
+<p>hexo s 启动博客</p>
+<p>hexo n “内容” 新建博客</p>
+<p>hexo clean 清除缓存</p>
+<p>hexo g 生成博客</p>
+<h2 id="部署到github厂库"><a href="#部署到github厂库" class="headerlink" title="部署到github厂库"></a>部署到github厂库</h2><p>在github上创建厂库 仓库名和用户名相同(用户名.github.io)</p>
+<p>安装插件 cnpm install –save hexo-deployer-git</p>
+<p>vim _config.yml 配置文件</p>
+<p>hexo d 部署到仓库</p>
+<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>克隆主题到themes目录下</p>
+<p>git clone <a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
+<p>配置文件_config.yml</p>
+<p>vim _config.yml(找到themes后进行更改)</p>
+<p>hexo clean</p>
+
       
 
       
@@ -180,6 +195,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">起飞啦</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -380,6 +406,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">起飞啦</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

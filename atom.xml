@@ -6,7 +6,7 @@
   <link href="https://zjw-1314.github.io/atom.xml" rel="self"/>
   
   <link href="https://zjw-1314.github.io/"/>
-  <updated>2022-10-16T05:02:15.408Z</updated>
+  <updated>2022-10-16T11:50:17.871Z</updated>
   <id>https://zjw-1314.github.io/</id>
   
   <author>
@@ -17,11 +17,58 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JS小技巧</title>
+    <link href="https://zjw-1314.github.io/2022/10/16/js-xiao-ji-qiao/"/>
+    <id>https://zjw-1314.github.io/2022/10/16/js-xiao-ji-qiao/</id>
+    <published>2022-10-16T11:48:04.000Z</published>
+    <updated>2022-10-16T11:50:17.871Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;写代码的时候总有一些东西是会重复出现的，次数多了你就会想找找捷径了。这类问题中有很大一部分解决起来甚至连库都不用装。下面就是我多年来收集的前 25 个捷径和小技巧。&lt;/p&gt;
+&lt;h2 id=&quot;1-类型检查小工具&quot;&gt;&lt;a href=&quot;#1-类型检查小工具&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端" scheme="https://zjw-1314.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端基础</title>
+    <link href="https://zjw-1314.github.io/2022/10/16/qian-duan-ji-chu/"/>
+    <id>https://zjw-1314.github.io/2022/10/16/qian-duan-ji-chu/</id>
+    <published>2022-10-16T11:41:59.000Z</published>
+    <updated>2022-10-16T11:46:27.970Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;知识体系&quot;&gt;&lt;a href=&quot;#知识体系&quot; class=&quot;headerlink&quot; title=&quot;知识体系&quot;&gt;&lt;/a&gt;知识体系&lt;/h1&gt;&lt;h2 id=&quot;什么是web前端？&quot;&gt;&lt;a href=&quot;#什么是web前端？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端" scheme="https://zjw-1314.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="https://zjw-1314.github.io/2022/10/16/hello-world/"/>
     <id>https://zjw-1314.github.io/2022/10/16/hello-world/</id>
-    <published>2022-10-16T05:02:15.408Z</published>
-    <updated>2022-10-16T05:02:15.408Z</updated>
+    <published>2022-10-16T06:00:00.000Z</published>
+    <updated>2022-10-16T11:42:59.560Z</updated>
     
     
       
@@ -34,6 +81,8 @@
     
     
     
+    
+    <category term="博客" scheme="https://zjw-1314.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   

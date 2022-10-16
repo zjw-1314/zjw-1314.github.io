@@ -6,7 +6,7 @@
   <link href="https://zjw-1314.github.io/atom.xml" rel="self"/>
   
   <link href="https://zjw-1314.github.io/"/>
-  <updated>2022-10-16T11:50:17.871Z</updated>
+  <updated>2022-10-16T11:46:27.970Z</updated>
   <id>https://zjw-1314.github.io/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>JS小技巧</title>
-    <link href="https://zjw-1314.github.io/2022/10/16/js-xiao-ji-qiao/"/>
-    <id>https://zjw-1314.github.io/2022/10/16/js-xiao-ji-qiao/</id>
-    <published>2022-10-16T11:48:04.000Z</published>
-    <updated>2022-10-16T11:50:17.871Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;写代码的时候总有一些东西是会重复出现的，次数多了你就会想找找捷径了。这类问题中有很大一部分解决起来甚至连库都不用装。下面就是我多年来收集的前 25 个捷径和小技巧。&lt;/p&gt;
-&lt;h2 id=&quot;1-类型检查小工具&quot;&gt;&lt;a href=&quot;#1-类型检查小工具&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="前端" scheme="https://zjw-1314.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
   
   <entry>
     <title>前端基础</title>

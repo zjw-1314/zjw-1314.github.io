@@ -1,12 +1,10 @@
 <div align="center">
     <div align="right">
-        简体中文 | <a href="README-EN.md">English</a>
+        <a href="README.md">简体中文</a> | English
     </div>
     <h1>zjw-1314.github.io</h1>
-    <p>基于 Hexo 的响应式 Github Pages 个人博客网站</p>
+    <p>A responsive personal blog website based on Hexo.</p>
 </div>
-
-
 
 ![GitHub stars](https://img.shields.io/github/stars/zjw-1314/zjw-1314.github.io?style=flat)
 ![GitHub forks](https://img.shields.io/github/forks/zjw-1314/zjw-1314.github.io?style=flat)

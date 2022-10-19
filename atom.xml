@@ -6,7 +6,7 @@
   <link href="https://zjw-1314.github.io/atom.xml" rel="self"/>
   
   <link href="https://zjw-1314.github.io/"/>
-  <updated>2022-10-16T11:46:27.970Z</updated>
+  <updated>2022-10-19T15:14:04.790Z</updated>
   <id>https://zjw-1314.github.io/</id>
   
   <author>
@@ -17,11 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>React-Router6</title>
+    <link href="https://zjw-1314.github.io/2022/10/19/react-router6/"/>
+    <id>https://zjw-1314.github.io/2022/10/19/react-router6/</id>
+    <published>2022-10-19T15:11:15.000Z</published>
+    <updated>2022-10-19T15:14:04.790Z</updated>
+    
+    
+    
+    
+    <category term="web" scheme="https://zjw-1314.github.io/categories/web/"/>
+    
+    
+    <category term="前端" scheme="https://zjw-1314.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>前端基础</title>
     <link href="https://zjw-1314.github.io/2022/10/16/qian-duan-ji-chu/"/>
     <id>https://zjw-1314.github.io/2022/10/16/qian-duan-ji-chu/</id>
     <published>2022-10-16T11:41:59.000Z</published>
-    <updated>2022-10-16T11:46:27.970Z</updated>
+    <updated>2022-10-19T15:14:28.895Z</updated>
     
     
       
@@ -34,6 +51,8 @@
     
     
     
+    <category term="web" scheme="https://zjw-1314.github.io/categories/web/"/>
+    
     
     <category term="前端" scheme="https://zjw-1314.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
@@ -44,7 +63,7 @@
     <link href="https://zjw-1314.github.io/2022/10/16/hello-world/"/>
     <id>https://zjw-1314.github.io/2022/10/16/hello-world/</id>
     <published>2022-10-16T06:00:00.000Z</published>
-    <updated>2022-10-16T11:42:59.560Z</updated>
+    <updated>2022-10-19T15:14:46.364Z</updated>
     
     
       
@@ -56,6 +75,8 @@
       
     
     
+    
+    <category term="blog" scheme="https://zjw-1314.github.io/categories/blog/"/>
     
     
     <category term="博客" scheme="https://zjw-1314.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>

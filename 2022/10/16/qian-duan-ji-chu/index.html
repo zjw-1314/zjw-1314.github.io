@@ -406,7 +406,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.5k
+                    6.6k
                 </div>
                 
 
@@ -427,6 +427,9 @@
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
         
 
         
@@ -484,7 +487,15 @@
 </ul>
 </li>
 <li><p>html基本结构</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;网页标题&lt;/title&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		可视区域</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;
+		&lt;title&gt;网页标题&lt;&#x2F;title&gt;
+	&lt;&#x2F;head&gt;
+	&lt;body&gt;
+		可视区域
+	&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h3 id="vscode基本操作及代码解读"><a href="#vscode基本操作及代码解读" class="headerlink" title="vscode基本操作及代码解读"></a>vscode基本操作及代码解读</h3><ul>
 <li><p>vscode基本操作：文件的增删改查</p>
@@ -496,13 +507,13 @@
 </ol>
 </li>
 <li><p>html文件代码解读</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>文档类型声明标签：告诉浏览器用哪种html版本来显示我们的页面</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;html lang&#x3D;&quot;en&quot;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>浏览器并不知道你页面中是什么语言，告诉浏览器，文档显示的语言是什么? en代表的就是英语就是英文网站，zh-CN定义的是中文，就是中文网站</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>字符编码:可以存储各种各样的文字。常见的有:GB2312(简休中文)、BlG5（繁休中文),GBK(包含繁体和简体，国标码）、UTF-8（万国码，包含了全世界所有国家需要用的的字符)。作用:防止乱码</p>
 </li>
@@ -547,7 +558,7 @@
 <li><p>属性是没有先后顺序的</p>
 </li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;1.jpg&quot; title=&quot;啊哈哈哈&quot; alt=&quot;欢迎图片&quot;/&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;img src&#x3D;&quot;1.jpg&quot; title&#x3D;&quot;啊哈哈哈&quot; alt&#x3D;&quot;欢迎图片&quot;&#x2F;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h3><p>​		路径可以分为:绝对路径和相对路径</p>
 <p>​		绝对路径:绝对路径是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径。完整的描述文件位置的路径就是绝对路径。主要有两种形式:</p>
@@ -572,7 +583,8 @@
 <li><p>禁止跳转：href &#x3D; “禁止跳转”</p>
 </li>
 <li><p>锚点跳转：作用：点击某个a标签的时候，可以跳转到相应的模块</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id = &quot;goods&quot;&gt;模块一&lt;/div&gt;</span><br><span class="line">&lt;a href = &quot;#goods&quot;&gt;跳转到模块一&lt;/a&gt;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">&lt;div id &#x3D; &quot;goods&quot;&gt;模块一&lt;&#x2F;div&gt;
+&lt;a href &#x3D; &quot;#goods&quot;&gt;跳转到模块一&lt;&#x2F;a&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 </ul>
 <h3 id="table表格标签"><a href="#table表格标签" class="headerlink" title="table表格标签"></a>table表格标签</h3><h4 id="table表格的作用"><a href="#table表格的作用" class="headerlink" title="table表格的作用"></a>table表格的作用</h4><p>主要用来展示我们的数据，增强可读性</p>
 <h4 id="table的基本语法"><a href="#table的基本语法" class="headerlink" title="table的基本语法"></a>table的基本语法</h4><p>标签				具体含义</p>
@@ -590,9 +602,17 @@
 <p>calspan             跨列</p>
 <p>rowspan	        跨行</p>
 <h3 id="三大列表标签"><a href="#三大列表标签" class="headerlink" title="三大列表标签"></a>三大列表标签</h3><h4 id="列表的作用"><a href="#列表的作用" class="headerlink" title="列表的作用"></a>列表的作用</h4><p>列表：列表主要是用来布局的，除了这个之外，只要是代表咱们列表的版块都可以用</p>
-<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">	&lt;li&gt;吃饭&lt;/li&gt;</span><br><span class="line">	&lt;li&gt;睡觉&lt;/li&gt;</span><br><span class="line">	&lt;li&gt;打豆豆&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><pre class="line-numbers language-none"><code class="language-none">&lt;ol&gt;
+	&lt;li&gt;吃饭&lt;&#x2F;li&gt;
+	&lt;li&gt;睡觉&lt;&#x2F;li&gt;
+	&lt;li&gt;打豆豆&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">	&lt;li&gt;吃饭&lt;/li&gt;</span><br><span class="line">	&lt;li&gt;睡觉&lt;/li&gt;</span><br><span class="line">	&lt;li&gt;打豆豆&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><pre class="line-numbers language-none"><code class="language-none">&lt;ul&gt;
+	&lt;li&gt;吃饭&lt;&#x2F;li&gt;
+	&lt;li&gt;睡觉&lt;&#x2F;li&gt;
+	&lt;li&gt;打豆豆&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h3><p>表单的作用：收集用户信息，便于以后的管理</p>
 <p>表单的组成：表单域（form）、表单元素、提示信息</p>
@@ -614,25 +634,35 @@
 <h4 id="input常用的属性"><a href="#input常用的属性" class="headerlink" title="input常用的属性"></a>input常用的属性</h4><p>![img](file:&#x2F;&#x2F;&#x2F;C:\Users\zjw19\Documents\Tencent Files\2506641977\Image\C2C]&#96;5GE8<del>M3DT[8U%]MMCB}</del>Y.png)</p>
 <h5 id="单选功能的实现"><a href="#单选功能的实现" class="headerlink" title="单选功能的实现"></a>单选功能的实现</h5><p>单选按钮功能实现</p>
 <p>对于同一组的单选按钮，我们需要给它们起一个相同的name值，这样浏览器就知道它们是一组了，就可以实现单选功能</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请选择您的性别：&lt;br/&gt;</span><br><span class="line">女 &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;女&quot;&gt;</span><br><span class="line">男 &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;男&quot;&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">请选择您的性别：&lt;br&#x2F;&gt;
+女 &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;sex&quot; value&#x3D;&quot;女&quot;&gt;
+男 &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;sex&quot; value&#x3D;&quot;男&quot;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="文字关联功能的实现"><a href="#文字关联功能的实现" class="headerlink" title="文字关联功能的实现"></a>文字关联功能的实现</h5><p>为了增加用户的体验，我们会实现文字关联功能，点击文字的时候，就可以实现选中的input，这个需要用到咱们的label标签。</p>
 <p><span style="color:red">label功能：当点击文字的时候，可以让和它关联的表单元素被选中</span></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;index.html&quot; method=&quot;GET&quot; name=&quot;getSex&quot;&gt;</span><br><span class="line">	请选择您的性别：&lt;br/&gt;</span><br><span class="line">	&lt;label for=&quot;wonman&quot;&gt;女&lt;/label&gt; &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;女&quot; id=&quot;wonman&quot;&gt;</span><br><span class="line">	&lt;label for=&quot;man&quot;&gt;男&lt;/label&gt; &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;男&quot; id=&quot;wonman&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;form action&#x3D;&quot;index.html&quot; method&#x3D;&quot;GET&quot; name&#x3D;&quot;getSex&quot;&gt;
+	请选择您的性别：&lt;br&#x2F;&gt;
+	&lt;label for&#x3D;&quot;wonman&quot;&gt;女&lt;&#x2F;label&gt; &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;sex&quot; value&#x3D;&quot;女&quot; id&#x3D;&quot;wonman&quot;&gt;
+	&lt;label for&#x3D;&quot;man&quot;&gt;男&lt;&#x2F;label&gt; &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;sex&quot; value&#x3D;&quot;男&quot; id&#x3D;&quot;wonman&quot;&gt;
+&lt;&#x2F;form&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="下拉框和文本域"><a href="#下拉框和文本域" class="headerlink" title="下拉框和文本域"></a>下拉框和文本域</h4><h5 id="select-下拉框"><a href="#select-下拉框" class="headerlink" title="select 下拉框"></a>select 下拉框</h5><p>select 下拉框及常用的属性</p>
 <ul>
 <li>selected 默认被选中</li>
 <li>disabled 禁止选中</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;select&gt;</span><br><span class="line">	&lt;option value=&quot;北京&quot; disabled&gt;北京&lt;/option&gt;</span><br><span class="line">	&lt;option value=&quot;上海&quot; checked&gt;上海&lt;/option&gt;</span><br><span class="line">	&lt;option value=&quot;河南&quot;&gt;河南&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;select&gt;
+	&lt;option value&#x3D;&quot;北京&quot; disabled&gt;北京&lt;&#x2F;option&gt;
+	&lt;option value&#x3D;&quot;上海&quot; checked&gt;上海&lt;&#x2F;option&gt;
+	&lt;option value&#x3D;&quot;河南&quot;&gt;河南&lt;&#x2F;option&gt;
+&lt;&#x2F;select&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="textarea-文本域"><a href="#textarea-文本域" class="headerlink" title="textarea 文本域"></a>textarea 文本域</h5><p>文本域：textarea，一般用在评论框或者留言</p>
 <ul>
 <li>col：一行显示的文字</li>
 <li>rows：规定多少行</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;textarea cols&#x3D;&quot;30&quot; rows&#x3D;&quot;10&quot;&gt;&lt;&#x2F;textarea&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="字符实体"><a href="#字符实体" class="headerlink" title="字符实体"></a>字符实体</h3><ol>
 <li>在HTML中不能使用小于号（&lt;)和大于号(&gt;)，这是因为浏览器会误认为它们是标签。</li>
@@ -640,11 +670,11 @@
 <li>字符实体用的不是很多，所以大家不用刻意去记忆，需要的时候直接查文档即可</li>
 <li>链接: https: &#x2F; &#x2F; <a target="_blank" rel="noopener" href="http://www.w3school.com.cn/">www.w3school.com.cn/</a></li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;你是你&amp;nbsp;&amp;nbsp;我是我&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;你是你&amp;nbsp;&amp;nbsp;我是我&lt;&#x2F;p&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="css-篇章"><a href="#css-篇章" class="headerlink" title="css 篇章"></a>css 篇章</h2><h4 id="css简介"><a href="#css简介" class="headerlink" title="css简介"></a>css简介</h4><p>​		css是Cascading Style Sheets的简称，我们把它称为“层叠样式表”主要用来美化页面的，可以给网页设置字体大小、颜色、布局等，让网页更加的漂亮。</p>
 <h4 id="语法规范"><a href="#语法规范" class="headerlink" title="语法规范"></a>语法规范</h4><p>选择器和多条语句组成</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;color:yellow;width:100px;height:100px&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">p&#123;color:yellow;width:100px;height:100px&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <ul>
 <li>选择器：具体的元素（选中谁）</li>
@@ -667,7 +697,9 @@
 <li>文字粗细：font-weight</li>
 <li>文字样式：font-style</li>
 </ul>
-<h4 id="字体的复合属性："><a href="#字体的复合属性：" class="headerlink" title="字体的复合属性："></a>字体的复合属性：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body&#123;</span><br><span class="line">	font:font-style font-weiht font-size/line-height font-family;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="字体的复合属性："><a href="#字体的复合属性：" class="headerlink" title="字体的复合属性："></a>字体的复合属性：</h4><pre class="line-numbers language-none"><code class="language-none">body&#123;
+	font:font-style font-weiht font-size&#x2F;line-height font-family;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p><span style="color:red">注意</span></p>
 <ol>
@@ -681,34 +713,50 @@
 <p>text-indent				   文本缩进（缩进两个字的距离2em）</p>
 <p>text-decoration            文本装饰线</p>
 <p>line-height					行高，控制行与行之间的距离</p>
-<h3 id="块级元素水平居中"><a href="#块级元素水平居中" class="headerlink" title="块级元素水平居中"></a>块级元素水平居中</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">	width:10px;</span><br><span class="line">	height:100px;</span><br><span class="line">	border:5px double green;</span><br><span class="line">	margin:0 auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="块级元素水平居中"><a href="#块级元素水平居中" class="headerlink" title="块级元素水平居中"></a>块级元素水平居中</h3><pre class="line-numbers language-none"><code class="language-none">div&#123;
+	width:10px;
+	height:100px;
+	border:5px double green;
+	margin:0 auto;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="清除默认样式"><a href="#清除默认样式" class="headerlink" title="清除默认样式"></a>清除默认样式</h3><p>清除默认的margin和padding</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">	margin:0;</span><br><span class="line">	padding:0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">*&#123;
+	margin:0;
+	padding:0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>清除列表前面的默认样式</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ul,ol&#123;</span><br><span class="line">	list-style:none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">ul,ol&#123;
+	list-style:none;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="css引入的几种方式"><a href="#css引入的几种方式" class="headerlink" title="css引入的几种方式"></a>css引入的几种方式</h3><ol>
 <li><p>行内样式</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;width:100px&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;div style&#x3D;&quot;width:100px&quot;&gt;&lt;&#x2F;div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>优点：书写方便，权重高</p>
 <p>缺点：没有做到结构样式相分离</p>
 </li>
 <li><p>内嵌样式</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">	div&#123;</span><br><span class="line">		color:red;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;style&gt;
+	div&#123;
+		color:red;
+	&#125;
+&lt;&#x2F;style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>优点：结构样式相分离</p>
 <p>缺点：分离不彻底</p>
 </li>
 <li><p>外链</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;index.css&quot;&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;index.css&quot;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>优点：完全结构和样式相分离</p>
 </li>
 <li><p>导入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">	@import url(&#x27;index.css&#x27;)</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;style&gt;
+	@import url(&#39;index.css&#39;)
+&lt;&#x2F;style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>在实际项目开发中，我们不用</p>
 </li>
@@ -723,20 +771,29 @@
 <p>选择器可以分为基础选择器和复合选择器。</p>
 <h5 id="通配选择器"><a href="#通配选择器" class="headerlink" title="通配选择器"></a>通配选择器</h5><p>权重：0</p>
 <p>符号：*</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">	margin: 0;</span><br><span class="line">	padding: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">* &#123;
+	margin: 0;
+	padding: 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h5><p>权重：1</p>
 <p>选择器：标签名</p>
 <p>作用：会对这一类都起作用</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p &#123;</span><br><span class="line">	color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">p &#123;
+	color: red;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h5><p>权重：10</p>
 <p>作用：把具有特定类名的元素都选中</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">	color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">.box &#123;
+	color: red;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h5><p>权重：100</p>
 <p>作用：把具有这个id名字的元素选中</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#box &#123;</span><br><span class="line">	color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">#box &#123;
+	color: red;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h5 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h5><p>常用的复合选择器</p>
 <p>子选择器	&gt;</p>
@@ -758,7 +815,9 @@
 </li>
 </ul>
 <h6 id="focus伪类选择器"><a href="#focus伪类选择器" class="headerlink" title="focus伪类选择器"></a>focus伪类选择器</h6><p>focus伪类选择器：用于选取获取焦点的表单元素</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">input:focus&#123;</span><br><span class="line">	background: yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">input:focus&#123;
+	background: yellow;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="css三大特性"><a href="#css三大特性" class="headerlink" title="css三大特性"></a>css三大特性</h3><p>css三大特性：继承性，层叠性，优先级</p>
 <h4 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h4><p>​		官方解析，继承是一种规则、它允许样式不仪应用于特定的html标签元素，而且应用于其后代元素。简单说就是给父元素设置一些属性，子元素 &#x2F; 后代也可以使用，这个我们称之为继承性。</p>
@@ -855,7 +914,7 @@
 </ul>
 <h2 id="background相关知识"><a href="#background相关知识" class="headerlink" title="background相关知识"></a>background相关知识</h2><p>值								       描述<br>background-color		      背景颜色<br>background-image	        背景图片<br>background-repeat            背景图像平铺的方式<br>background-attachment    规定背景图像是否固定或者随着页面的其余部分滚动。<br>background-position          背景位置<br>background-size                控制背景图片的大小</p>
 <p>background复合写法</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: background-color background-image background-repeat background-attachment background-position</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">background: background-color background-image background-repeat background-attachment background-position<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><h3 id="浮动的出现"><a href="#浮动的出现" class="headerlink" title="浮动的出现"></a>浮动的出现</h3><ul>
 <li>想让块级元素在一行显示</li>
@@ -891,7 +950,17 @@
 <li><p>隔墙法，用clear清除浮动造成的影响</p>
 </li>
 <li><p>通过伪元素清除浮动</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 给浮动元素的父元素添加.clearfix类名</span><br><span class="line">.clearfix:after &#123;</span><br><span class="line">	content:&quot;&quot;;</span><br><span class="line">	font-size:0;</span><br><span class="line">	display:block;</span><br><span class="line">	visibility:hidden;</span><br><span class="line">	clear:both;</span><br><span class="line">&#125;</span><br><span class="line">.clearfix&#123;</span><br><span class="line">	*zoom:1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 给浮动元素的父元素添加.clearfix类名
+.clearfix:after &#123;
+	content:&quot;&quot;;
+	font-size:0;
+	display:block;
+	visibility:hidden;
+	clear:both;
+&#125;
+.clearfix&#123;
+	*zoom:1;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h3 id="浮动的拓展"><a href="#浮动的拓展" class="headerlink" title="浮动的拓展"></a>浮动的拓展</h3><p>浮动的初心：</p>
 <p>最早发明浮动的时候，就是为了实现图片的环绕排列，浮动的元素，层级会高于普通文档流的，但是它不会压住文字，文字会进行环绕性排列</p>
@@ -1495,6 +1564,9 @@
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -1658,7 +1730,7 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 15px !important;">
+         style="margin-bottom: '15px !important;'">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1670,7 +1742,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">8.9k</span>
+                        class="white-color">9.1k</span>
             
             
             

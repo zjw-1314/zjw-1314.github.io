@@ -407,14 +407,14 @@ react-router-dom：包含react-">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    2.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    12 分
                 </div>
                 
 
@@ -428,6 +428,9 @@ react-router-dom：包含react-">
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
         
 
         
@@ -465,7 +468,17 @@ react-router-dom：包含react-">
 <li><p>说明：<code>&lt;BroswerRouter</code>用于包裹整个应用</p>
 </li>
 <li><p>实例代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React from &#x27;react&#x27;;</span><br><span class="line">import ReactDOM from &#x27;react-dom/client&#x27;;</span><br><span class="line">import &#123; BrowserRouter &#125; from &quot;react-router-dom&quot;;</span><br><span class="line">import App from &#x27;./App&#x27;;</span><br><span class="line"></span><br><span class="line">const root = ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;));</span><br><span class="line">root.render(</span><br><span class="line">    &lt;BrowserRouter&gt;</span><br><span class="line">        &lt;App /&gt;</span><br><span class="line">    &lt;/BrowserRouter&gt;</span><br><span class="line">);</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-react" data-language="react"><code class="language-react">import React from &#39;react&#39;;
+import ReactDOM from &#39;react-dom&#x2F;client&#39;;
+import &#123; BrowserRouter &#125; from &quot;react-router-dom&quot;;
+import App from &#39;.&#x2F;App&#39;;
+
+const root &#x3D; ReactDOM.createRoot(document.getElementById(&#39;root&#39;));
+root.render(
+    &lt;BrowserRouter&gt;
+        &lt;App &#x2F;&gt;
+    &lt;&#x2F;BrowserRouter&gt;
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h3 id="2-lt-HashRouter-gt"><a href="#2-lt-HashRouter-gt" class="headerlink" title="2. &lt;HashRouter&gt;"></a>2. <code>&lt;HashRouter&gt;</code></h3><ol>
 <li>说明：作用于<code>&lt;BrowserRouter&gt;</code>一样，但<code>&lt;HashRouter&gt;</code>修改的是地址栏的hash值</li>
@@ -485,7 +498,16 @@ react-router-dom：包含react-">
 <li><p><Route>也可以嵌套使用，且可配合useRoutes()配置“路由表”，但需要通过<outlet>组件来渲染其子路由。</p>
 </li>
 <li><p>示例代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;Routes&gt;</span><br><span class="line">/*path属性用于定义路径，element属性用于定义当前路径所对应的组件*/</span><br><span class="line">    &lt;Route path=&quot;/login&quot; element=&#123;&lt;Login /&gt;&#125;&gt;&lt;/Route&gt;</span><br><span class="line">/*用于定义嵌套路由，home是一级路由，对应的路径/home* /</span><br><span class="line">    &lt;Route path=&quot;/home&quot; element=&#123;&lt;Home /&gt;&#125;&gt;</span><br><span class="line">/*test1 和 test2是二级路由,对应的路径是/home/test1或/home/test2* /</span><br><span class="line">        &lt;Route path=&quot;test1&quot; element=&#123;&lt;Test1 /&gt;&#125;&gt;&lt;/Route&gt;</span><br><span class="line">        &lt;Route path=&quot;test2&quot; element=&#123;&lt;Test2 /&gt;&#125;&gt;&lt;/Route&gt;&lt;/ Route&gt;</span><br><span class="line">    &lt;/Route&gt;</span><br><span class="line">&lt;/Routes&gt;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-react" data-language="react"><code class="language-react">&lt;Routes&gt;
+&#x2F;*path属性用于定义路径，element属性用于定义当前路径所对应的组件*&#x2F;
+    &lt;Route path&#x3D;&quot;&#x2F;login&quot; element&#x3D;&#123;&lt;Login &#x2F;&gt;&#125;&gt;&lt;&#x2F;Route&gt;
+&#x2F;*用于定义嵌套路由，home是一级路由，对应的路径&#x2F;home* &#x2F;
+    &lt;Route path&#x3D;&quot;&#x2F;home&quot; element&#x3D;&#123;&lt;Home &#x2F;&gt;&#125;&gt;
+&#x2F;*test1 和 test2是二级路由,对应的路径是&#x2F;home&#x2F;test1或&#x2F;home&#x2F;test2* &#x2F;
+        &lt;Route path&#x3D;&quot;test1&quot; element&#x3D;&#123;&lt;Test1 &#x2F;&gt;&#125;&gt;&lt;&#x2F;Route&gt;
+        &lt;Route path&#x3D;&quot;test2&quot; element&#x3D;&#123;&lt;Test2 &#x2F;&gt;&#125;&gt;&lt;&#x2F;Route&gt;&lt;&#x2F; Route&gt;
+    &lt;&#x2F;Route&gt;
+&lt;&#x2F;Routes&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h3 id="4-lt-Link-gt"><a href="#4-lt-Link-gt" class="headerlink" title="4. &lt;Link&gt;"></a>4. <code>&lt;Link&gt;</code></h3><ol>
 <li><p>作用：修改URL，且不发送网络请求(路由链接)。</p>
@@ -493,13 +515,40 @@ react-router-dom：包含react-">
 <li><p>注意：外侧需要用<BrowserRouter>或<HashRouter>包裹。</p>
 </li>
 <li><p>实例代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Link &#125; from &quot;react-router-don&quot;;</span><br><span class="line">function Test() &#123;</span><br><span class="line">	return (</span><br><span class="line">	&lt;div&gt;</span><br><span class="line">		&lt;Link to=&quot;/路径&quot;&gt;按钮&lt;/Link&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">	);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-react" data-language="react"><code class="language-react">import &#123; Link &#125; from &quot;react-router-don&quot;;
+function Test() &#123;
+	return (
+	&lt;div&gt;
+		&lt;Link to&#x3D;&quot;&#x2F;路径&quot;&gt;按钮&lt;&#x2F;Link&gt;
+    &lt;&#x2F;div&gt;
+	);
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h3 id="5-lt-NavLink-gt"><a href="#5-lt-NavLink-gt" class="headerlink" title="5. &lt;NavLink&gt;"></a>5. <code>&lt;NavLink&gt;</code></h3><ol>
 <li><p>作用：与<code>&lt;Link&gt;</code>组件类似，且可实现导航的”高亮”效果</p>
 </li>
 <li><p>示例代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//注意:NavLink默认类名是active.下面是指定自定义的class</span><br><span class="line">//自定义样式</span><br><span class="line">&lt;NavLink</span><br><span class="line">	to=&quot;login”</span><br><span class="line">	className=&#123;(&#123; isActive &#125;) =&gt; &#123;</span><br><span class="line">		console.log( &#x27; home &#x27; , isActive)</span><br><span class="line">		return isActive ? &#x27;base one&#x27; : &#x27;base &#x27;&#125;</span><br><span class="line">&gt; </span><br><span class="line">   login</span><br><span class="line">&lt;/NavLink&gt;</span><br><span class="line">/*</span><br><span class="line">默认情况下，当Home的子组件匹配成功，Home的导航也会高亮，</span><br><span class="line">当NavLink上添加了end属性后，若Home的子组件匹配成功，则Home的导航没有高亮效果。</span><br><span class="line">* /</span><br><span class="line">        </span><br><span class="line">&lt;NavLink to=&quot;home&quot; end &gt;</span><br><span class="line">    home</span><br><span class="line">&lt;/NavLink&gt;</span><br><span class="line">  </span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-react" data-language="react"><code class="language-react">&#x2F;&#x2F;注意:NavLink默认类名是active.下面是指定自定义的class
+&#x2F;&#x2F;自定义样式
+&lt;NavLink
+	to&#x3D;&quot;login”
+	className&#x3D;&#123;(&#123; isActive &#125;) &#x3D;&gt; &#123;
+		console.log( &#39; home &#39; , isActive)
+		return isActive ? &#39;base one&#39; : &#39;base &#39;&#125;
+&gt; 
+   login
+&lt;&#x2F;NavLink&gt;
+&#x2F;*
+默认情况下，当Home的子组件匹配成功，Home的导航也会高亮，
+当NavLink上添加了end属性后，若Home的子组件匹配成功，则Home的导航没有高亮效果。
+* &#x2F;
+        
+&lt;NavLink to&#x3D;&quot;home&quot; end &gt;
+    home
+&lt;&#x2F;NavLink&gt;
+  
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h3 id="6-lt-Navigate-gt"><a href="#6-lt-Navigate-gt" class="headerlink" title="6. &lt;Navigate&gt;"></a>6. <code>&lt;Navigate&gt;</code></h3><ol>
 <li><p>作用：只要<Navigate>组件被渲染，就会修改路径，切换视图。</p>
@@ -507,31 +556,174 @@ react-router-dom：包含react-">
 <li><p>replace属性用于控制跳转模式(push 或 replace，默认是push).</p>
 </li>
 <li><p>示例代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import React,&#123;usestate&#125; from &#x27;react&#x27;</span><br><span class="line">import &#123;Navigate&#125; from &#x27;react-router-dom&quot;</span><br><span class="line">export default function Home()&#123;</span><br><span class="line">const [sum, setsum] = usestate(1)</span><br><span class="line">return (</span><br><span class="line">	&lt;div&gt;</span><br><span class="line">	  &lt;h3&gt;我是Home的内容&lt;/h3&gt;</span><br><span class="line">		&#123;/*根据sum的值决定是否切换视图*/&#125;</span><br><span class="line">&#123;</span><br><span class="line">    sum === 1 ? &lt;h4&gt;sum的值为&#123;sum&#125;&lt;/h4&gt; : &lt;Navigate to=&quot;/about&quot; replace=ftrue&#125;/&gt;</span><br><span class="line">&#125;</span><br><span class="line">      &lt;button onclick=&#123;()=&gt;setSum(2)&#125;&gt;点我将sum变2&lt;/button&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-react" data-language="react"><code class="language-react">import React,&#123;usestate&#125; from &#39;react&#39;
+import &#123;Navigate&#125; from &#39;react-router-dom&quot;
+export default function Home()&#123;
+const [sum, setsum] &#x3D; usestate(1)
+return (
+	&lt;div&gt;
+	  &lt;h3&gt;我是Home的内容&lt;&#x2F;h3&gt;
+		&#123;&#x2F;*根据sum的值决定是否切换视图*&#x2F;&#125;
+&#123;
+    sum &#x3D;&#x3D;&#x3D; 1 ? &lt;h4&gt;sum的值为&#123;sum&#125;&lt;&#x2F;h4&gt; : &lt;Navigate to&#x3D;&quot;&#x2F;about&quot; replace&#x3D;ftrue&#125;&#x2F;&gt;
+&#125;
+      &lt;button onclick&#x3D;&#123;()&#x3D;&gt;setSum(2)&#125;&gt;点我将sum变2&lt;&#x2F;button&gt;
+	&lt;&#x2F;div&gt;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h3 id="7-lt-Outlet-gt"><a href="#7-lt-Outlet-gt" class="headerlink" title="7. &lt;Outlet&gt;"></a>7. <code>&lt;Outlet&gt;</code></h3><ol>
 <li><p>当<code>&lt;Route&gt;</code>产生嵌套是，渲染其对应的后续子路由</p>
 </li>
 <li><p>示例代码</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据路由表生成对应的路由规则</span></span><br><span class="line"><span class="keyword">const</span> element = <span class="title function_">useRoutes</span>([</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&quot;/about&quot;</span>,</span><br><span class="line">    <span class="attr">element</span>: <span class="language-xml"><span class="tag">&lt;<span class="name">About</span> /&gt;</span></span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&quot;/home&quot;</span>,</span><br><span class="line">    <span class="attr">element</span>: <span class="language-xml"><span class="tag">&lt;<span class="name">Home</span> /&gt;</span></span>,</span><br><span class="line">    <span class="attr">children</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">path</span>: <span class="string">&quot;news&quot;</span>,</span><br><span class="line">        <span class="attr">element</span>: <span class="language-xml"><span class="tag">&lt;<span class="name">News</span> /&gt;</span></span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">path</span>: <span class="string">&quot;message&quot;</span>,</span><br><span class="line">        <span class="attr">element</span>: <span class="language-xml"><span class="tag">&lt;<span class="name">Message</span> /&gt;</span></span>,</span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">  &#125;</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="comment">// Home.js</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">NavLink</span>,<span class="title class_">Outlet</span>,useOutlet &#125; <span class="keyword">from</span> <span class="string">&quot;react-router-dom&quot;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Home</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;useOutlet:&#x27;</span>,<span class="title function_">useOutlet</span>())</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">NavLink</span> <span class="attr">to</span>=<span class="string">&quot;message&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">              message</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">NavLink</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">NavLink</span> <span class="attr">to</span>=<span class="string">&quot;news&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">              news</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">NavLink</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        &#123;/* 指定路由组件呈现的位置 */&#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Outlet</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"><span class="token comment">// 根据路由表生成对应的路由规则</span>
+<span class="token keyword">const</span> element <span class="token operator">=</span> <span class="token function">useRoutes</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"/about"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">element</span><span class="token operator">:</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">About</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"/home"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">element</span><span class="token operator">:</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Home</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">,</span>
+    <span class="token literal-property property">children</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"news"</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">element</span><span class="token operator">:</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">News</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"message"</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">element</span><span class="token operator">:</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Message</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Home.js</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NavLink<span class="token punctuation">,</span>Outlet<span class="token punctuation">,</span>useOutlet <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"react-router-dom"</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Home</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'useOutlet:'</span><span class="token punctuation">,</span><span class="token function">useOutlet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">NavLink</span></span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>message<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+              message
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">NavLink</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">NavLink</span></span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>news<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+              news
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">NavLink</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token punctuation">&#123;</span><span class="token comment">/* 指定路由组件呈现的位置 */</span><span class="token punctuation">&#125;</span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Outlet</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h2 id="3-Hooks"><a href="#3-Hooks" class="headerlink" title="3. Hooks"></a>3. Hooks</h2><h3 id="1-useRoutes"><a href="#1-useRoutes" class="headerlink" title="1. useRoutes()"></a>1. useRoutes()</h3><ol>
 <li><p>作用：根据路由表，动态创建<code>&lt;Routes&gt;</code>和<code>&lt;Route&gt;</code></p>
 </li>
 <li><p>实例代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">// 路由表配置：src/routes/index.js</span><br><span class="line">import &#123; Navigate &#125; from &quot;react-router-dom&quot;;</span><br><span class="line"></span><br><span class="line">import About from &#x27;../pages/About&#x27;</span><br><span class="line">import Home from &#x27;../pages/Home&#x27;</span><br><span class="line">export default [</span><br><span class="line">    &#123;</span><br><span class="line">      path:&#x27;/about&#x27;,</span><br><span class="line">      element:&lt;About/&gt;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path:&#x27;/home&#x27;,</span><br><span class="line">      element:&lt;Home/&gt;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path:&#x27;/&#x27;,</span><br><span class="line">      element:&lt;Navigate to=&quot;/about&quot;/&gt;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">// App.jsx</span><br><span class="line">import React from &quot;react&quot;;</span><br><span class="line">import &#123; NavLink, useRoutes &#125; from &quot;react-router-dom&quot;;</span><br><span class="line">import routes from &#x27;./routes&#x27;</span><br><span class="line"></span><br><span class="line">export default function App() &#123;</span><br><span class="line">  // 创建路由表</span><br><span class="line">  const element = useRoutes(routes)</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">            &#123;/* 原生html中，靠&lt;a&gt;跳转不同的页面 */&#125;</span><br><span class="line">            &#123;/* &lt;a className=&quot;list-group-item&quot; href=&quot;./about.html&quot;&gt;About&lt;/a&gt;</span><br><span class="line">          &lt;a className=&quot;list-group-item active&quot; href=&quot;./home.html&quot;&gt;Home&lt;/a&gt; */&#125;</span><br><span class="line"></span><br><span class="line">            &#123;/* 在React中靠路由链接实现切换组件--编写路由链接(导航区) */&#125;</span><br><span class="line">            &lt;NavLink className=&quot;list-group-item&quot; to=&quot;/about&quot;&gt;</span><br><span class="line">              About</span><br><span class="line">            &lt;/NavLink&gt;</span><br><span class="line">            &lt;NavLink className=&quot;list-group-item&quot; to=&quot;/home&quot;&gt;</span><br><span class="line">              Home</span><br><span class="line">            &lt;/NavLink&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div&gt;</span><br><span class="line">            &#123;/* 注册路由(展示区) */&#125;</span><br><span class="line">            &#123;/* 使用路由表 */&#125;</span><br><span class="line">            &#123;</span><br><span class="line">              element</span><br><span class="line">            &#125;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-react" data-language="react"><code class="language-react">&#x2F;&#x2F; 路由表配置：src&#x2F;routes&#x2F;index.js
+import &#123; Navigate &#125; from &quot;react-router-dom&quot;;
+
+import About from &#39;..&#x2F;pages&#x2F;About&#39;
+import Home from &#39;..&#x2F;pages&#x2F;Home&#39;
+export default [
+    &#123;
+      path:&#39;&#x2F;about&#39;,
+      element:&lt;About&#x2F;&gt;
+    &#125;,
+    &#123;
+      path:&#39;&#x2F;home&#39;,
+      element:&lt;Home&#x2F;&gt;
+    &#125;,
+    &#123;
+      path:&#39;&#x2F;&#39;,
+      element:&lt;Navigate to&#x3D;&quot;&#x2F;about&quot;&#x2F;&gt;
+    &#125;
+  ]
+&#x2F;&#x2F; App.jsx
+import React from &quot;react&quot;;
+import &#123; NavLink, useRoutes &#125; from &quot;react-router-dom&quot;;
+import routes from &#39;.&#x2F;routes&#39;
+
+export default function App() &#123;
+  &#x2F;&#x2F; 创建路由表
+  const element &#x3D; useRoutes(routes)
+
+  return (
+    &lt;div&gt;
+      &lt;div&gt;
+            &#123;&#x2F;* 原生html中，靠&lt;a&gt;跳转不同的页面 *&#x2F;&#125;
+            &#123;&#x2F;* &lt;a className&#x3D;&quot;list-group-item&quot; href&#x3D;&quot;.&#x2F;about.html&quot;&gt;About&lt;&#x2F;a&gt;
+          &lt;a className&#x3D;&quot;list-group-item active&quot; href&#x3D;&quot;.&#x2F;home.html&quot;&gt;Home&lt;&#x2F;a&gt; *&#x2F;&#125;
+
+            &#123;&#x2F;* 在React中靠路由链接实现切换组件--编写路由链接(导航区) *&#x2F;&#125;
+            &lt;NavLink className&#x3D;&quot;list-group-item&quot; to&#x3D;&quot;&#x2F;about&quot;&gt;
+              About
+            &lt;&#x2F;NavLink&gt;
+            &lt;NavLink className&#x3D;&quot;list-group-item&quot; to&#x3D;&quot;&#x2F;home&quot;&gt;
+              Home
+            &lt;&#x2F;NavLink&gt;
+          &lt;&#x2F;div&gt;
+          &lt;div&gt;
+            &#123;&#x2F;* 注册路由(展示区) *&#x2F;&#125;
+            &#123;&#x2F;* 使用路由表 *&#x2F;&#125;
+            &#123;
+              element
+            &#125;
+          &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  );
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h3 id="2-useNavigate"><a href="#2-useNavigate" class="headerlink" title="2. useNavigate()"></a>2. useNavigate()</h3><ol>
 <li><p>作用：返回一个函数来实现编程式导航</p>
 </li>
 <li><p>实例代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import React from &#x27;react&#x27;</span><br><span class="line">import &#123;useNavigate&#125; from &#x27;react-router-dom&#x27;</span><br><span class="line">export default function Demo() &#123;</span><br><span class="line">	const navigate = useNavigate()</span><br><span class="line">	const handle = () =&gt; &#123;</span><br><span class="line">		//第一种使用方式:指定具体的路径</span><br><span class="line">        navigate(&quot;/login&quot;,&#123;</span><br><span class="line">			replace: false,</span><br><span class="line">             state: ia:1， b:2</span><br><span class="line">        &#125;</span><br><span class="line">             </span><br><span class="line">    &#125;</span><br><span class="line">		//第二种使用方式:传入数值进行前进或后退，类似于5.x中的 history.go()方法</span><br><span class="line">         navigate(-1)</span><br><span class="line">return (</span><br><span class="line">	&lt;div&gt;</span><br><span class="line">		&lt;button onClick=&#123;handle&#125;&gt;按钮&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-react" data-language="react"><code class="language-react">import React from &#39;react&#39;
+import &#123;useNavigate&#125; from &#39;react-router-dom&#39;
+export default function Demo() &#123;
+	const navigate &#x3D; useNavigate()
+	const handle &#x3D; () &#x3D;&gt; &#123;
+		&#x2F;&#x2F;第一种使用方式:指定具体的路径
+        navigate(&quot;&#x2F;login&quot;,&#123;
+			replace: false,
+             state: ia:1， b:2
+        &#125;
+             
+    &#125;
+		&#x2F;&#x2F;第二种使用方式:传入数值进行前进或后退，类似于5.x中的 history.go()方法
+         navigate(-1)
+return (
+	&lt;div&gt;
+		&lt;button onClick&#x3D;&#123;handle&#125;&gt;按钮&lt;&#x2F;button&gt;
+    &lt;&#x2F;div&gt;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h3 id="3-useParams"><a href="#3-useParams" class="headerlink" title="3. useParams()"></a>3. useParams()</h3><ol>
 <li><p>作用：返回当前匹配路由的<code>params</code>参数，类似5.x中的<code>match.params</code></p>
 </li>
 <li><p>实例代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react &#x27;;</span><br><span class="line">import &#123; Routes,Route,useParams &#125; from &quot;react-router-dom&quot;;</span><br><span class="line">import User from &quot;./pages/User.jsx&#x27;;</span><br><span class="line">function ProfilePage() &#123;</span><br><span class="line">	//获取URL中携带过来的params参数</span><br><span class="line">	let &#123; id &#125;= useParams();</span><br><span class="line">&#125;</span><br><span class="line">function App() &#123;</span><br><span class="line">	return (</span><br><span class="line">		&lt;Routes&gt;</span><br><span class="line">			&lt;Route path=&quot;users/:id&quot; element=&#123;&lt;User /&gt;&#125;/&gt;</span><br><span class="line">		&lt;/Routes&gt;</span><br><span class="line">	)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-react" data-language="react"><code class="language-react">import React from &quot;react &#39;;
+import &#123; Routes,Route,useParams &#125; from &quot;react-router-dom&quot;;
+import User from &quot;.&#x2F;pages&#x2F;User.jsx&#39;;
+function ProfilePage() &#123;
+	&#x2F;&#x2F;获取URL中携带过来的params参数
+	let &#123; id &#125;&#x3D; useParams();
+&#125;
+function App() &#123;
+	return (
+		&lt;Routes&gt;
+			&lt;Route path&#x3D;&quot;users&#x2F;:id&quot; element&#x3D;&#123;&lt;User &#x2F;&gt;&#125;&#x2F;&gt;
+		&lt;&#x2F;Routes&gt;
+	)
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h3 id="4-useSearchParams"><a href="#4-useSearchParams" class="headerlink" title="4. useSearchParams()"></a>4. useSearchParams()</h3><ol>
 <li><p>作用：用于读取和修改当前位置的URL中的查询字符串。</p>
@@ -539,19 +731,90 @@ react-router-dom：包含react-">
 <li><p>返回一个包含两个值的数组，内容分别为：当前的seaech参数、更新search的函数。</p>
 </li>
 <li><p>实例代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import React from &#x27;react&#x27;</span><br><span class="line">import &#123; useSearchParams,useLocation &#125; from &quot;react-router-dom&quot;;</span><br><span class="line"></span><br><span class="line">export default function Details() &#123;</span><br><span class="line">  // 2. 接收参数</span><br><span class="line">  const [search, setSearch] = useSearchParams()</span><br><span class="line">  const id = search.get(&#x27;id&#x27;)</span><br><span class="line">  const title = search.get(&#x27;title&#x27;)</span><br><span class="line">  const content = search.get(&#x27;content&#x27;)</span><br><span class="line"></span><br><span class="line">  const x = useLocation()</span><br><span class="line">  console.log(x)</span><br><span class="line">  return (</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;</span><br><span class="line">          &lt;button onClick=&#123;()=&gt;setSearch(&#x27;id=008&amp;title=哈哈&amp;content=嘻嘻&#x27;)&#125;&gt;点我更新一下收到的参数&lt;/button&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">        &lt;li&gt;消息编号：&#123;id&#125;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;消息标题：&#123;title&#125;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;消息内容：&#123;content&#125;&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-react" data-language="react"><code class="language-react">import React from &#39;react&#39;
+import &#123; useSearchParams,useLocation &#125; from &quot;react-router-dom&quot;;
+
+export default function Details() &#123;
+  &#x2F;&#x2F; 2. 接收参数
+  const [search, setSearch] &#x3D; useSearchParams()
+  const id &#x3D; search.get(&#39;id&#39;)
+  const title &#x3D; search.get(&#39;title&#39;)
+  const content &#x3D; search.get(&#39;content&#39;)
+
+  const x &#x3D; useLocation()
+  console.log(x)
+  return (
+    &lt;ul&gt;
+        &lt;li&gt;
+          &lt;button onClick&#x3D;&#123;()&#x3D;&gt;setSearch(&#39;id&#x3D;008&amp;title&#x3D;哈哈&amp;content&#x3D;嘻嘻&#39;)&#125;&gt;点我更新一下收到的参数&lt;&#x2F;button&gt;
+        &lt;&#x2F;li&gt;
+        &lt;li&gt;消息编号：&#123;id&#125;&lt;&#x2F;li&gt;
+        &lt;li&gt;消息标题：&#123;title&#125;&lt;&#x2F;li&gt;
+        &lt;li&gt;消息内容：&#123;content&#125;&lt;&#x2F;li&gt;
+    &lt;&#x2F;ul&gt;
+  )
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h3 id="5-useLocation"><a href="#5-useLocation" class="headerlink" title="5. useLocation()"></a>5. useLocation()</h3><ol>
 <li><p>作用：获取当前location信息，对标5.x中的路由组件的location属性</p>
 </li>
 <li><p>实例代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">import React from &#x27;react&#x27;</span><br><span class="line">import &#123; useLocation &#125; from &quot;react-router-dom&quot;;</span><br><span class="line"></span><br><span class="line">export default function Details() &#123;</span><br><span class="line">  // 2. 接收参数</span><br><span class="line">  const &#123;state&#125; = useLocation()</span><br><span class="line">  console.log(state)</span><br><span class="line">    // location对象</span><br><span class="line">    /*</span><br><span class="line">    	&#123;</span><br><span class="line">    		hash: &quot;&quot;,</span><br><span class="line">    		key: &quot;ah9nv6sz&quot;,</span><br><span class="line">    		pathname: &quot;/login&quot;,</span><br><span class="line">    		search: &quot;?name=zs&amp;age=18&quot;,</span><br><span class="line">    		state: &#123;a: 1,b: 2&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    */</span><br><span class="line">  return (</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;消息编号：&#123;state.id&#125;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;消息标题：&#123;state.title&#125;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;消息内容：&#123;state.content&#125;&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-react" data-language="react"><code class="language-react">import React from &#39;react&#39;
+import &#123; useLocation &#125; from &quot;react-router-dom&quot;;
+
+export default function Details() &#123;
+  &#x2F;&#x2F; 2. 接收参数
+  const &#123;state&#125; &#x3D; useLocation()
+  console.log(state)
+    &#x2F;&#x2F; location对象
+    &#x2F;*
+    	&#123;
+    		hash: &quot;&quot;,
+    		key: &quot;ah9nv6sz&quot;,
+    		pathname: &quot;&#x2F;login&quot;,
+    		search: &quot;?name&#x3D;zs&amp;age&#x3D;18&quot;,
+    		state: &#123;a: 1,b: 2&#125;
+    	&#125;
+    *&#x2F;
+  return (
+    &lt;ul&gt;
+        &lt;li&gt;消息编号：&#123;state.id&#125;&lt;&#x2F;li&gt;
+        &lt;li&gt;消息标题：&#123;state.title&#125;&lt;&#x2F;li&gt;
+        &lt;li&gt;消息内容：&#123;state.content&#125;&lt;&#x2F;li&gt;
+    &lt;&#x2F;ul&gt;
+  )
+&#125;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h3 id="6-useMatch"><a href="#6-useMatch" class="headerlink" title="6. useMatch()"></a>6. useMatch()</h3><ol>
 <li><p>作用：返回当前匹配信息，对标5.x中的路由组件的<code>match</code>属性</p>
 </li>
 <li><p>实例代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;Route path=&quot;/login/:page/:pagesize&quot; element=&#123;&lt;Login /&gt;&#125;/&gt;&lt;NavLink to=&quot;/login/1/10&quot;&gt;登录&lt;/NavLink&gt;</span><br><span class="line">export default function Login() &#123;</span><br><span class="line">const match = useMatch(&#x27;/login/:x/:y&#x27;)</span><br><span class="line">console.log(match)//输出match对象</span><br><span class="line">// match对象内容如下:</span><br><span class="line">/*</span><br><span class="line">&#123;</span><br><span class="line">	params: &#123;x: &quot;1&#x27;, y: &quot;10&#x27;&#125;</span><br><span class="line">	pathname: &quot;/LoGin/1/10&quot;</span><br><span class="line">	pathnameBase: &quot;/LoGin/1/1e&quot;</span><br><span class="line">	pattern: &#123;</span><br><span class="line">		path: &#x27;/ login/:x/:y&#x27;,</span><br><span class="line">		casesensitive:false,</span><br><span class="line">		end: false</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">*/</span><br><span class="line">return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">		&lt;h1&gt;Login&lt;/h1&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-react" data-language="react"><code class="language-react">&lt;Route path&#x3D;&quot;&#x2F;login&#x2F;:page&#x2F;:pagesize&quot; element&#x3D;&#123;&lt;Login &#x2F;&gt;&#125;&#x2F;&gt;&lt;NavLink to&#x3D;&quot;&#x2F;login&#x2F;1&#x2F;10&quot;&gt;登录&lt;&#x2F;NavLink&gt;
+export default function Login() &#123;
+const match &#x3D; useMatch(&#39;&#x2F;login&#x2F;:x&#x2F;:y&#39;)
+console.log(match)&#x2F;&#x2F;输出match对象
+&#x2F;&#x2F; match对象内容如下:
+&#x2F;*
+&#123;
+	params: &#123;x: &quot;1&#39;, y: &quot;10&#39;&#125;
+	pathname: &quot;&#x2F;LoGin&#x2F;1&#x2F;10&quot;
+	pathnameBase: &quot;&#x2F;LoGin&#x2F;1&#x2F;1e&quot;
+	pattern: &#123;
+		path: &#39;&#x2F; login&#x2F;:x&#x2F;:y&#39;,
+		casesensitive:false,
+		end: false
+	&#125;
+&#125;
+*&#x2F;
+return (
+    &lt;div&gt;
+		&lt;h1&gt;Login&lt;&#x2F;h1&gt;
+    &lt;&#x2F;div&gt;
+)
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h3 id="7-useInRouterContext"><a href="#7-useInRouterContext" class="headerlink" title="7. useInRouterContext()"></a>7. useInRouterContext()</h3><p>作用：如果组件在<code>&lt;Router&gt;</code>的上下文中呈现，则<code>useInRouterContext</code>钩子返回true，否则返回false</p>
 <h3 id="8-useNavigationType"><a href="#8-useNavigationType" class="headerlink" title="8. useNavigationType()"></a>8. useNavigationType()</h3><ol>
@@ -563,7 +826,10 @@ react-router-dom：包含react-">
 <li><p>作用：用来呈现当前组件中要渲染的嵌套路由</p>
 </li>
 <li><p>示例代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const result = useOutlet()</span><br><span class="line">console.log(result)</span><br><span class="line">// 如果嵌套路由没有挂载，则result为null</span><br><span class="line">// 如果嵌套路由已经挂载，则展示嵌套的路由对象</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-react" data-language="react"><code class="language-react">const result &#x3D; useOutlet()
+console.log(result)
+&#x2F;&#x2F; 如果嵌套路由没有挂载，则result为null
+&#x2F;&#x2F; 如果嵌套路由已经挂载，则展示嵌套的路由对象<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h3 id="10-useResolvedPath"><a href="#10-useResolvedPath" class="headerlink" title="10. useResolvedPath()"></a>10. useResolvedPath()</h3><ol>
 <li>作用：给定一个URL值，解析其中的：path、search、hash值</li>
@@ -1125,6 +1391,9 @@ react-router-dom：包含react-">
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
 
 <!-- 代码语言 -->
 
@@ -1288,7 +1557,7 @@ react-router-dom：包含react-">
     
 
     <div class="container row center-align"
-         style="margin-bottom: 15px !important;">
+         style="margin-bottom: '15px !important;'">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1300,7 +1569,7 @@ react-router-dom：包含react-">
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">8.9k</span>
+                        class="white-color">9.1k</span>
             
             
             

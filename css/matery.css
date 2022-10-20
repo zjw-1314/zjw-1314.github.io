@@ -241,8 +241,7 @@ mark {
 }
 
 .bg-color {
-    background-color: rgba(255, 255, 255, .3);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(to right, #EAE5C9 0%, #6CC6CB 100%);
 }
 
 .text-color {
